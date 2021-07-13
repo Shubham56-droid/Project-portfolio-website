@@ -264,8 +264,22 @@ button
     border-top-right-radius: 20px;
     width:100%;
     z-index: 1;
-    
 }
+.header.active
+{
+    position: fixed;
+    top:35px;
+    padding: 20px 15px ;
+}
+
+.header.active .container
+{
+   
+   max-width: 1200px;
+   margin: auto;
+
+}
+
 .flex-end
 {
     justify-content: flex-end;
@@ -286,12 +300,13 @@ button
     margin: 0 15px;
     position: relative;
     z-index: 1;
-    
+    transition: opacity 0.5s ease-in-out;
 }
-/* .header.active .nav-toggler
+.header .nav-toggler.hide
 {
-    position: fixed;
-} */
+   opacity: 0;
+   transition: none;
+}
 
 .header .nav-toggler span
 {
@@ -299,7 +314,15 @@ button
     width: 24px;
     background-color: var(--main-color);
     position: relative;
+    transition: background-color 0.5s ease;
 }
+
+.header.active .nav-toggler span
+{
+    background-color: transparent;
+}
+
+
 .header .nav-toggler span::before,
 .header .nav-toggler span::after
 {
@@ -318,18 +341,32 @@ button
     transform: translateY(-8px);
 }
 
+.header.active .nav-toggler span::before
+{
+    transform: rotate(45deg)
+}
+
 .header .nav-toggler span::after
 {
     right:0;
     transform: translateY(8px);
 }
-
+.header.active .nav-toggler span::after
+{
+    transform: rotate(-45deg)
+}
 .header .nav-toggler:hover span::before,
 .header .nav-toggler:hover span::after
 {
-    width:50%;
-    
+    width:100%;
 }
+
+.header.active .nav-toggler:hover span::before,
+.header.active .nav-toggler:hover span::after
+{
+    width:100%;
+}
+
 .header .nav{
     position: fixed;
     left: 0;
@@ -397,8 +434,8 @@ button
     background-color: var(--white-alpha-25);
     z-index: -1;
     transition: width 0.5s ease;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 .header .nav-inner ul li a::after
 {
@@ -406,6 +443,8 @@ button
     position: absolute;
     right: 0;
     top: 0;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
     height: 50%;
     width: 0%;
     background-color: var(--white-alpha-40);
