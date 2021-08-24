@@ -12,10 +12,11 @@
 <p>It is protfolio website making project with html css and  javascript. it is responsive and is multipage website. It has animation  and  glassmorphisms effect that gives it a cool look. Hope you like it....</p>
 <br/>
 <h2>Images</h2>
-<img src="./img/" />
-<img src="./img/" />
-<img src="./img/" />
-<img src="./img/" />
+<img src="./img/Screenshot (380).png" />
+<img src="./img/Screenshot (381).png" />
+<img src="./img/Screenshot (382).png" />
+<img src="./img/Screenshot (383).png" />
+<img src="./img/Screenshot (384).png" />
 <br/>
 <h2>Contact info</h2>
 <p>If you have any question feel free to contact me at my  github link</p>
